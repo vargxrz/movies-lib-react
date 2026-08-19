@@ -1,73 +1,55 @@
-<div align="center">
+# Movies Lib
 
-# 🎬 Movies Lib
-
-**Descubra e explore os melhores filmes do cinema**
-
-[![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.3-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![TMDB](https://img.shields.io/badge/TMDB-API-01B4E4?style=for-the-badge&logo=themoviedatabase&logoColor=white)](https://www.themoviedb.org/)
-
-</div>
+Aplicação para descobrir e explorar filmes usando a API do TMDB.
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- **🏆 Top Filmes** — Lista os filmes mais bem avaliados de todos os tempos
-- **🔍 Busca** — Pesquise qualquer filme pelo título em tempo real
-- **🎥 Detalhes** — Página completa com sinopse, gêneros, duração, orçamento e receita
-- **💀 Skeleton Loading** — Placeholders animados durante o carregamento
-- **📱 Responsivo** — Layout adaptado para qualquer tela
+- **Top Filmes** — lista os filmes mais bem avaliados de todos os tempos
+- **Busca** — pesquise qualquer filme pelo título em tempo real
+- **Detalhes** — sinopse, gêneros, duração, orçamento e receita
+- **Skeleton Loading** — placeholders animados durante o carregamento
+- **Responsivo** — layout adaptado para qualquer tela
 
 ---
 
-## 🚀 Como rodar
+## Como rodar
 
-### Pré-requisitos
-
-- Node.js 18+
-- Chave de API do [TMDB](https://www.themoviedb.org/settings/api)
-
-### Instalação
+**Pré-requisitos:** Node.js 18+ e uma chave de API do [TMDB](https://www.themoviedb.org/settings/api).
 
 ```bash
-# Clone o repositório
 git clone https://github.com/seu-usuario/Movies-Lib-React.git
 cd Movies-Lib-React
-
-# Instale as dependências
 npm install
 ```
 
-### Rodando
-
 ```bash
-npm run dev      # Servidor de desenvolvimento
-npm run build    # Build de produção
-npm run preview  # Preview do build
+npm run dev      # servidor de desenvolvimento
+npm run build    # build de produção
+npm run preview  # preview do build
 ```
 
 ---
 
-## 🗂️ Estrutura do projeto
+## Estrutura
 
 ```
 src/
 ├── components/
-│   ├── Navbar.jsx      # Barra de navegação com busca
-│   └── MovieCard.jsx   # Card reutilizável de filme
+│   ├── Navbar.jsx      # barra de navegação com busca
+│   └── MovieCard.jsx   # card reutilizável de filme
 ├── pages/
-│   ├── Home.jsx        # Grid dos top-rated
-│   ├── Search.jsx      # Resultados da busca
-│   └── Movie.jsx       # Detalhes do filme
-├── App.jsx             # Layout raiz + rotas
-└── main.jsx            # Bootstrap da aplicação
+│   ├── Home.jsx        # grid dos top-rated
+│   ├── Search.jsx      # resultados da busca
+│   └── Movie.jsx       # detalhes do filme
+├── App.jsx             # layout raiz + rotas
+└── main.jsx            # bootstrap da aplicação
 ```
 
 ---
 
-## 🛠️ Stack
+## Stack
 
 | Tecnologia | Uso |
 |---|---|
@@ -79,7 +61,7 @@ src/
 
 ---
 
-## 📄 Rotas
+## Rotas
 
 | Rota | Página |
 |---|---|
