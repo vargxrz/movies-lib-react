@@ -1,62 +1,84 @@
-.container .title {
-    color: #fff;
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 2rem 0 1rem;
+.page-section {
+  padding: 2.5rem 2rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-header {
+  margin-bottom: 1.75rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.section-title .accent {
+  color: var(--accent);
+}
+
+.query-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.query-label span {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem 1.25rem;
+}
+
+.movies-grid--skeleton {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem 1.25rem;
+}
+
+.skeleton-card {
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius);
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.empty-state h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.empty-state p {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .page-section {
+    padding: 1.5rem 1rem 3rem;
   }
-  
-  .title .query-text {
-    color: #f7d354;
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
   }
-  
-  .movies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .movies-grid--skeleton {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1rem;
   }
-  
-  .movies-container div {
-    width: 30%;
-    color: #fff;
-    margin-bottom: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #111;
-    padding: 1rem;
-  }
-  
-  .movies-container div img {
-    max-width: 100%;
-  }
-  
-  .movies-container div img,
-  .movies-container div p {
-    margin-bottom: 1rem;
-  }
-  
-  .movies-container div h2 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .movies-container div svg {
-    color: #f7d354;
-  }
-  
-  .movies-container div a {
-    background-color: #f7d354;
-    border: 2px solid #f7d354;
-    border-radius: 4px;
-    color: #000;
-    padding: 1rem 0.5rem;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .movies-container div a:hover {
-    background-color: transparent;
-    color: #f7d354;
-  }
+}

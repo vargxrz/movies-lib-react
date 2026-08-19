@@ -1,38 +1,97 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
 
-#navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #121212;
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.navbar__logo svg {
+  color: var(--accent);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.navbar__form {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  max-width: 420px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  height: 38px;
+}
+
+.navbar__form:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.12);
+}
+
+.navbar__input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  padding: 0 1rem;
+  outline: none;
+}
+
+.navbar__input::placeholder {
+  color: var(--text-secondary);
+  font-size: 0.83rem;
+}
+
+.navbar__btn {
+  background: var(--accent);
+  border: none;
+  color: #000;
+  width: 42px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.navbar__btn:hover {
+  background: var(--accent-dim);
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+    gap: 1rem;
   }
-  
-  #navbar h2 a {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+
+  .navbar__logo span {
+    display: none;
   }
-  
-  #navbar form {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  #navbar input {
-    padding: 0.2rem 0.8rem;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  #navbar form button {
-    background-color: #f7d354;
-    border: 2px solid #f7d354;
-    border-radius: 4px;
-    color: #000;
-    padding: 0.3rem;
-    font-size: 1.3rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  
+}
